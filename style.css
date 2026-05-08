@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.quiz-header h1 {
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.quiz-header p {
+  color: #666;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+.question-box {
+  margin-bottom: 25px;
+}
+
+.question-box h2 {
+  color: #222;
+  line-height: 1.5;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer-btn {
+  padding: 15px;
+  border: 2px solid #dce4f7;
+  border-radius: 12px;
+  background: #f7f9ff;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+  font-size: 16px;
+}
+
+.answer-btn:hover {
+  background: #dce8ff;
+  transform: translateY(-2px);
+}
+
+.answer-btn.correct {
+  background: #b8f5c8;
+  border-color: #28a745;
+}
+
+.answer-btn.wrong {
+  background: #ffc9c9;
+  border-color: #dc3545;
+}
+
+.answer-btn:disabled {
+  cursor: not-allowed;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #1e3c72;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2a5298;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+#result-box {
+  text-align: center;
+}
+
+#result-box h2 {
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+#final-message {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+@media(max-width: 600px) {
+
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .question-box h2 {
+    font-size: 20px;
+  }
+
+  .answer-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+}
